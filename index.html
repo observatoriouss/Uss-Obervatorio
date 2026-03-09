@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CIES 2026 – Generador de Poster</title>
+
+<meta property="og:title" content="CIES 2026 – Generador de Poster">
+<meta property="og:description" content="Sistema para generar posters automáticamente">
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2025/01/23/13/53/woman-9354692_1280.jpg">
+<meta property="og:image:secure_url" content="https://cdn.pixabay.com/photo/2025/01/23/13/53/woman-9354692_1280.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="853">
+<meta property="og:url" content="https://lively-coast-07f8eda10.1.azurestaticapps.net">
+<meta property="og:type" content="website">
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        background:#f2f2f2;
+    }
+
+    .share-btn{
+        background:#1877f2;
+        color:white;
+        padding:12px 20px;
+        border:none;
+        border-radius:5px;
+        font-size:16px;
+        cursor:pointer;
+    }
+
+    .share-btn:hover{
+        background:#1664d9;
+    }
+</style>
+
+</head>
+
+<body>
+
+<h1>Mi aplicación</h1>
+
+<button class="share-btn" onclick="shareFacebook()">
+Compartir en Facebook
+</button>
+
+<script>
+
+function shareFacebook(){
+
+    const url = "https://lively-coast-07f8eda10.1.azurestaticapps.net";
+
+    const shareUrl =
+    "https://www.facebook.com/dialog/share?" +
+    "app_id=1989972604948139" +
+    "&display=popup" +
+    "&href=" + encodeURIComponent(url);
+
+    window.open(
+        shareUrl,
+        "facebook-share-dialog",
+        "width=626,height=436"
+    );
+}
+
+</script>
+
+</body>
+</html>
